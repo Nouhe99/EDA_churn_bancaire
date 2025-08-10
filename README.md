@@ -50,7 +50,7 @@ Identifier et comprendre les facteurs qui influencent la résiliation des compte
 ## 🚀 Utilisation
 1. Cloner le dépôt :
    ```bash
-   git clone https://github.com/ton-utilisateur/nom-du-repo.git
+   git clone https://github.com/Nouhe99/EDA_churn_bancaire
 
 2. Installer les dépendances :
    ```bash
