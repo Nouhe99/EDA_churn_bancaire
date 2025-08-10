@@ -45,8 +45,7 @@ L’étude combine un nettoyage rigoureux des données, des visualisations clair
 
 | Distribution clé | Segmentation PCA | Importances |
 |------------------|------------------|-------------|
-| ![Violin](
-figuresAnalyse/05_violin_Total_Relationship_Count_by_target.png) | ![PCA](figuresAnalyse/07_pca_by_target.png) | ![Importances](figuresAnalyse/12_importances_logreg.png) |
+| ![Violin](figuresAnalyse/05_violin_Total_Relationship_Count_by_target.png) | ![PCA](figuresAnalyse/07_pca_by_target.png) | ![Importances](figuresAnalyse/12_importances_logreg.png) |
 
 ---
 
