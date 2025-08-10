@@ -1,5 +1,10 @@
 # 📊 Analyse exploratoire complète du churn bancaire (BankChurners)
-
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter%20Notebook-orange)
+![Data Science](https://img.shields.io/badge/Data%20Science-blueviolet)
+![Licence MIT](https://img.shields.io/badge/Licence-MIT-green)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-85%25-yellowgreen)
 ## 🎯 Objectif
 Analyser les facteurs liés à l’attrition des clients bancaires à partir du jeu de données *BankChurners*, afin d’identifier des leviers concrets de rétention.  
 L’étude combine un nettoyage rigoureux des données, des visualisations claires et une modélisation explicable.
@@ -83,4 +88,3 @@ figuresAnalyse/05_violin_Total_Relationship_Count_by_target.png) | ![PCA](figure
    scikit‑learn, scipy
 
    Jupyter Notebook
-   
