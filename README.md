@@ -50,14 +50,14 @@ Identifier et comprendre les facteurs qui influencent la résiliation des compte
 ## 🚀 Utilisation
 1. Cloner le dépôt :
    ```bash
-   "git clone https://github.com/ton-utilisateur/nom-du-repo.git"
+   git clone https://github.com/ton-utilisateur/nom-du-repo.git
 
 2. Installer les dépendances :
    ```bash
-   "pip install -r requirements.txt"
+   pip install -r requirements.txt
 
 3. Lancer le notebook :
    ```bash
-   "jupyter notebook"
+   jupyter notebook
 
-4.Ouvrir "EDA_churners_banque.ipynb" et exécuter les cellules dans l’ordre.
+4. Ouvrir "EDA_churners_banque.ipynb" et exécuter les cellules dans l’ordre.
