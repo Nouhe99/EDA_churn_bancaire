@@ -1,63 +1,86 @@
-# 📊 Analyse du churn bancaire — BankChurners
+# 📊 Analyse exploratoire complète du churn bancaire (BankChurners)
 
 ## 🎯 Objectif
-Identifier et comprendre les facteurs qui influencent la résiliation des comptes clients dans le secteur bancaire, afin de proposer des actions ciblées de rétention.
+Analyser les facteurs liés à l’attrition des clients bancaires à partir du jeu de données *BankChurners*, afin d’identifier des leviers concrets de rétention.  
+L’étude combine un nettoyage rigoureux des données, des visualisations claires et une modélisation explicable.
 
-## 🗂 Jeu de données
-- Source : jeu de données *BankChurners* (institution bancaire fictive)
-- Description : informations démographiques, comportementales et transactionnelles de clients.
-- Taille : ~10 000 enregistrements, 20+ variables.
+---
+
+## 📂 Jeu de données
+- **Source** : BankChurners (données fictives publiques)
+- **Taille** : 10 127 lignes, 23 variables
+- **Contenu** : informations démographiques, comportements transactionnels, produits détenus
+
+---
 
 ## 🛠 Méthodologie
-1. **Chargement et exploration initiale**
-   - Aperçu du jeu de données, types, statistiques descriptives.
-2. **Qualité et nettoyage des données**
-   - Gestion des valeurs manquantes et des codes “Unknown”.
-   - Suppression des variables présentant un risque de fuite (leakage).
-3. **Analyse exploratoire des données (EDA)**
-   - **Univariée** : distributions, outliers (IQR).
-   - **Bivariée** : corrélations numériques, tests statistiques (Mann–Whitney, Chi²).
-   - **Multivariée** : PCA, t‑SNE.
-4. **Feature Engineering**
-   - Création de variables dérivées (ex. montant moyen par transaction, tranches d’âge).
-5. **Modélisation explicable**
-   - Régression logistique avec métriques (ROC‑AUC, matrice de confusion).
-   - Importance directionnelle des variables.
-6. **Segmentation**
-   - Clustering KMeans pour repérer des profils distincts.
+1. **Préparation & nettoyage**
+   - Suppression de variables à risque de fuite (*leakage*)
+   - Gestion des valeurs manquantes et codes “Unknown”
+   - Typage des variables
+2. **Analyse exploratoire des données (EDA)**
+   - Analyse univariée, bivariée et multivariée
+   - Tests statistiques (Mann–Whitney, Chi²)
+   - Détection des valeurs aberrantes (IQR)
+3. **Feature engineering**
+   - Création de variables dérivées (ex. montant moyen par transaction, tranches d’âge)
+4. **Modélisation explicable**
+   - Régression logistique
+   - ROC‑AUC, matrice de confusion, importances directionnelles
+5. **Segmentation**
+   - PCA, t‑SNE, KMeans
+
+---
+
+## 📊 Aperçu visuel
+
+| Valeurs manquantes | Corrélations | Performance modèle |
+|--------------------|--------------|--------------------|
+| ![Missing](figuresAnalyse/01_missing_heatmap.png) | ![Corr](figuresAnalyse/04_corr_matrix.png) | ![ROC](figuresAnalyse/10_roc_logreg.png) |
+
+| Distribution clé | Segmentation PCA | Importances |
+|------------------|------------------|-------------|
+| ![Violin](
+figuresAnalyse/05_violin_Total_Relationship_Count_by_target.png) | ![PCA](figuresAnalyse/07_pca_by_target.png) | ![Importances](figuresAnalyse/12_importances_logreg.png) |
+
+---
 
 ## 📈 Résultats clés
-- **Taux global de churn** : calculé lors de l’exécution.
-- Variables transactionnelles (nombre et montant) et inactivité récente fortement liées à l’attrition.
-- Influence de certaines tranches de revenus et catégories de carte.
+- **Facteurs majeurs** : activité transactionnelle, variations trimestrielles, inactivité récente
+- Influence de certaines catégories de carte et tranches de revenus
+- Modèle interprétable capable de classer les clients à risque
 
-## 📌 Recommandations
-- Cibler en priorité les clients inactifs depuis 2–3 mois.
-- Proposer des incitations à l’usage pour les profils à faible volume de transactions.
-- Déployer des campagnes de rétention segmentées selon le profil.
+---
 
-## 📷 Exemples de visualisations
-- Matrice de corrélation
-- Violin plots par cible
-- PCA et t‑SNE colorés par statut
-- Importances de la régression logistique
+## 💡 Recommandations
+- Campagnes de rétention ciblées sur les profils à forte probabilité de churn
+- Alertes précoces sur inactivité prolongée
+- Segmentation des offres selon profil client
 
-## 🧰 Stack technique
-- **Langage** : Python 3 (>=3.9)
-- **Bibliothèques** : pandas, numpy, matplotlib, seaborn, scikit‑learn, scipy
-- **Outils** : Jupyter Notebook, GitHub
+---
 
 ## 🚀 Utilisation
-1. Cloner le dépôt :
+1. **Cloner le dépôt**
    ```bash
-   git clone https://github.com/Nouhe99/EDA_churn_bancaire
-
-2. Installer les dépendances :
+   git clone https://github.com/Nouhe99/EDA_churn_bancaire.git
+   cd EDA_churn_bancaire
+2. **Installer les dépendances**
    ```bash
    pip install -r requirements.txt
-
-3. Lancer le notebook :
+3. **Lancer le notebook**
    ```bash
    jupyter notebook
+4. **Ouvrir** "EDA_churners_banque.ipynb" **et exécuter les cellules**
 
-4. Ouvrir "EDA_churners_banque.ipynb" et exécuter les cellules dans l’ordre.
+---
+
+## 🧰 Stack technique
+
+   Python 3.x
+   
+   pandas, numpy, matplotlib, seaborn
+
+   scikit‑learn, scipy
+
+   Jupyter Notebook
+   
